@@ -1,8 +1,18 @@
 package hello.hello_spring.domain;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+
+@Entity
 public class Member {
-    private String name;
+
+    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
+    private String name;
+
 
     public String getName() {
         return name;
